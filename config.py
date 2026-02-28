@@ -2,4 +2,4 @@
 Software: Pesquisa de NPS
 '''
 
-DB_PATH = "/home/trindade/Documentos/NPS/dados.db"
+DB_PATH = "dados.db"
