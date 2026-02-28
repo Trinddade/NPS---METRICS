@@ -36,9 +36,3 @@ Tabela respostas_nps
 1. Criar ambiente virtual
 2. Instalar dependências
 3. Executar run.py
-
-## Roadmap
-
-- Implementar autenticação
-- Criar dashboard analítico
-- Adicionar testes automatizados
