@@ -130,6 +130,23 @@ def carregar_dataframes():
             "SELECT * FROM respostas_nps", conn
         )
     return df_identificacao, df_respostas_nps
+
+def standardize(df_identificacao: pd.DataFrame, df_respostas_nps: pd.DataFrame) -> tuple:
+    
+    df_identificacao = df_identificacao.copy()
+    df_respostas_nps = df_respostas_nps.copy()
+    
+    df_identificacao['created_at'] = pd.to_datetime(df_identificacao['created_at'])
+    df_identificacao['created_at'] = df_identificacao['created_at'].dt.date
+    df_identificacao['nome_completo'] = df_identificacao['nome_completo'].str.strip().str.title()
+    df_identificacao['nome_empresa'] = df_identificacao['nome_empresa'].str.strip().str.title()
+    df_identificacao['cnpj'] = df_identificacao['cnpj'].astype(str).str.strip().str.zfill(14)
+    
+    df_respostas_nps = df_respostas_nps.drop(columns=['created_at'])
+    
+    return ## falta concluir
+#  fase final da transformação, falta a logica para gerar o número de NPS
+# importante é transformar os valores das colunas que vão receber as respostas da pesquisa para int
     
 if __name__ == '__main__':
     
