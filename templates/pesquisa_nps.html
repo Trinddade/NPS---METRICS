@@ -3,74 +3,75 @@
 
 <head>
 
-<meta charset="UTF-8">
-<title>Pesquisa NPS</title>
+    <meta charset="UTF-8">
+    <title>Pesquisa NPS</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ url_for('static', filename='pesquisa_nps.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pesquisa_nps.css') }}">
 
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<div class="card">
+        <div class="card">
 
-<h1>Pesquisa de Satisfação</h1>
+            <h1>Pesquisa de Satisfação</h1>
 
-<p class="subtitle">
-Avalie nossos serviços e nos ajude a melhorar continuamente.
-</p>
+            <p class="subtitle">
+                Avalie nossos serviços e nos ajude a melhorar continuamente.
+            </p>
 
-<div class="divider"></div>
+            <div class="divider"></div>
 
-<form method="POST" action="{{ url_for('salvar_nps') }}">
+            <form method="POST" action="{{ url_for('salvar_nps') }}">
 
-<div class="form-group">
-<input type="number" name="nps_nota" min="0" max="10" required placeholder=" ">
-<label>De 0 a 10, quanto você recomendaria?</label>
-</div>
+                <div class="form-group">
+                    <input type="number" name="nps_nota" min="0" max="10" required placeholder=" ">
+                    <label>De 0 a 10, quanto você recomendaria?</label>
+                </div>
 
-<div class="form-group">
-<input type="number" name="qualidade_produto" min="1" max="5" required placeholder=" ">
-<label>Qualidade do produto (1-5)</label>
-</div>
+                <div class="form-group">
+                    <input type="number" name="qualidade_produto" min="1" max="5" required placeholder=" ">
+                    <label>Qualidade do produto (1-5)</label>
+                </div>
 
-<div class="form-group">
-<input type="number" name="atendimento" min="1" max="5" required placeholder=" ">
-<label>Atendimento (1-5)</label>
-</div>
+                <div class="form-group">
+                    <input type="number" name="atendimento" min="1" max="5" required placeholder=" ">
+                    <label>Atendimento (1-5)</label>
+                </div>
 
-<div class="form-group">
-<input type="number" name="prazo_entrega" min="1" max="5" required placeholder=" ">
-<label>Prazo de entrega (1-5)</label>
-</div>
+                <div class="form-group">
+                    <input type="number" name="prazo_entrega" min="1" max="5" required placeholder=" ">
+                    <label>Prazo de entrega (1-5)</label>
+                </div>
 
-<div class="form-group">
-<input type="number" name="custo_beneficio" min="1" max="5" required placeholder=" ">
-<label>Custo-benefício (1-5)</label>
-</div>
+                <div class="form-group">
+                    <input type="number" name="custo_beneficio" min="1" max="5" required placeholder=" ">
+                    <label>Custo-benefício (1-5)</label>
+                </div>
 
-<div class="form-group">
-<input type="number" name="facilidade_negociacao" min="1" max="5" required placeholder=" ">
-<label>Facilidade de negociação (1-5)</label>
-</div>
+                <div class="form-group">
+                    <input type="number" name="facilidade_negociacao" min="1" max="5" required placeholder=" ">
+                    <label>Facilidade de negociação (1-5)</label>
+                </div>
 
-<div class="form-group">
-<input type="number" name="satisfacao_geral" min="1" max="5" required placeholder=" ">
-<label>Satisfação geral (1-5)</label>
-</div>
+                <div class="form-group">
+                    <input type="number" name="satisfacao_geral" min="1" max="5" required placeholder=" ">
+                    <label>Satisfação geral (1-5)</label>
+                </div>
 
-<button class="btn" type="submit">
-Finalizar Pesquisa
-</button>
+                <button class="btn" type="submit">
+                    Finalizar Pesquisa
+                </button>
 
-</form>
+            </form>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </body>
+
 </html>
